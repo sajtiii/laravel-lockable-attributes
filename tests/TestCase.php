@@ -33,7 +33,8 @@ class TestCase extends Orchestra
         ];
     }
 
-    public function setUpEnvironment($app) {
+    public function setUpEnvironment($app)
+    {
         $app['config']->set('app.env', 'testing');
         $app['config']->set('app.key', 'base64:MDdjejMwdmQweWl4enhxNWcycDdiOGZpZ3ZlajhlZHU=');
     }
