@@ -1,0 +1,28 @@
+name: Larastan
+
+on:
+  push:
+    paths:
+      - '**.php'
+      - '.github/workflows/larastan.yaml'
+      - 'phpstan.neon'
+      - 'composer.json'
+      - 'composer.lock'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --ignore-platform-reqs --quiet
+
+      - name: Execute tests
+        run: ./vendor/bin/phpstan analyse --memory-limit=1G
