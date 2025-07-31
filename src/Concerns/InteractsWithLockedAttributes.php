@@ -5,7 +5,7 @@ namespace Sajtiii\LockableAttributes\Concerns;
 use Illuminate\Database\Eloquent\Model;
 use Sajtiii\LockableAttributes\Contracts\HasLockedAttributes;
 
-trait InteractsWithLockedAttributes
+trait InteractsWithLockedAttributes // @phpstan-ignore trait.unused
 {
     public static function bootInteractsWithLockedAttributes()
     {
