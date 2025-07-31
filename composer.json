@@ -3,7 +3,7 @@
     "description": "Lock your eloquent model attributes to prevent changes on them.",
     "type": "package",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "minimum-stability": "stable",
     "authors": [
         {
